@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 // 2. Replace FORM_ID below with your Formspree form id.
 // 3. Alternatively use EmailJS or a serverless function if you prefer.
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/manlzldp'; // <-- replace this
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwpakedo'; // <-- replace this
 
 function Contact() {
   const [name, setName] = useState('');
@@ -87,8 +87,9 @@ function Contact() {
         )}
 
         <div className="contact-info">
-          <p><strong>Email:</strong> ratmirkhasanov2007@gmail.com</p>
-          <p><strong>Phone:</strong> +31648068113</p>
+          <p><strong>Email:</strong> vlad@tarba.nl</p>
+          <p><strong>Phone:</strong> +31642852508</p>
+          <p><strong>Discord:</strong> ikbenvlad</p>
           <p>Feel free to reach out for collaborations or just a friendly hello!</p>
         </div>
       </div>
