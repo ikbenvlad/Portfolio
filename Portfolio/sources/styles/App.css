@@ -1,0 +1,239 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.welcome-section .glass.welcome-content {
+  padding: 4rem 6rem !important;
+  border-radius: 1.5rem !important;
+  backdrop-filter: blur(10px);
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-greeting {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  padding: 0 1rem;
+}
+
+.welcome-text {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(45deg, var(--accent), var(--accent3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+}
+
+.welcome-subtitle {
+  font-size: 3rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+.welcome-subtext {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  max-width: 600px;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.welcome-cta {
+  margin-top: 3rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--accent);
+  color: var(--background);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+}
+
+/* Glass effect improvements */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Welcome page specific glass effect */
+.welcome-section .glass.welcome-content {
+  padding: 1rem 3rem !important;
+  margin: 2rem auto !important;
+  border-radius: 1.5rem !important;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1000;
+}
+
+.menu-icon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--text-color);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.menu-icon::before {
+  transform: translateY(-8px);
+}
+
+.menu-icon::after {
+  transform: translateY(8px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  nav.container {
+    padding: 1rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    border-left: 1px solid var(--glass-border);
+    z-index: 999;
+  }
+
+  /* Ensure parent has a background for blur to work */
+  header {
+    background: transparent;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    margin: 1.5rem 0;
+  }
+
+  .welcome-section .glass.welcome-content {
+    padding: 2rem !important;
+    margin: 1rem !important;
+  }
+
+  .welcome-text {
+    font-size: 3rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 2rem;
+  }
+
+  .welcome-subtext {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet Responsive Design */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .welcome-section .glass.welcome-content {
+    padding: 3rem !important;
+    margin: 1.5rem auto !important;
+  }
+
+  .welcome-text {
+    font-size: 3.5rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 2.5rem;
+  }
+}
+
+/* Small phone screens */
+@media screen and (max-width: 480px) {
+  .welcome-section .glass.welcome-content {
+    padding: 1.5rem !important;
+    margin: 0.5rem !important;
+  }
+
+  .welcome-text {
+    font-size: 2.5rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .welcome-subtext {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
