@@ -31,11 +31,11 @@ function Header({ theme, toggleTheme }) {
               Projects
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/devlog" className={({ isActive }) => (isActive ? 'active-link' : '')}>
               Devlog
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active-link' : '')}>
               Contact

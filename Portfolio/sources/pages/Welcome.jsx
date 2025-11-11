@@ -12,7 +12,7 @@ export default function Welcome() {
     <section className="container welcome-section">
       <div className="glass welcome-content">
         <p className="welcome-greeting">Hi, I'm</p>
-        <h1 className="welcome-text">TREYX77</h1>
+        <h1 className="welcome-text">Vlad</h1>
         <h2 className="welcome-subtitle">I build things for the web.</h2>
         <p className="welcome-subtext">
           Im a software developer specializing in creating Games and Web Applications on multiple platforms. 
