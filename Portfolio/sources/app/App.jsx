@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Welcome from './pages/Welcome';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Devlog from './pages/Devlog';
-import Contact from './pages/Contact';
-import Resume from './pages/Resume';
-import './styles/App.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Welcome from '../pages/Welcome';
+import About from '../pages/About';
+import Projects from '../pages/Projects';
+import Devlog from '../pages/Devlog';
+import Contact from '../pages/Contact';
+import Resume from '../pages/Resume';
+import '../styles/App.css';
 
 function App() {
   const [theme, setTheme] = useState('dark');
