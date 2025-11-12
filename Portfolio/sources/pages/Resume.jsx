@@ -3,44 +3,58 @@ import gsap from 'gsap';
 
 function Resume() {
   useEffect(() => {
-    gsap.from(".resume-content", {
-      scrollTrigger: { trigger: ".resume-content", start: "top 80%" },
+    gsap.from('.resume-container', {
+      scrollTrigger: { trigger: '.resume-container', start: 'top 80%' },
       opacity: 0,
-      duration: 1
+      y: 30,
+      duration: 0.8
     });
   }, []);
 
+  const handleDownload = (filename, displayName) => {
+    const link = document.createElement('a');
+    link.href = `/Portfolio/${filename}`;
+    link.download = displayName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <section className="container">
-      <h2 className="section-title">Resume</h2>
-      <div className="glass resume-content">
-        <h3>Experience</h3>
-        <ul>
-          <li>
-            <strong>Frontend Developer</strong> - Tech Company (2023 - Present)
-            <p>Develop and maintain responsive web applications using React, Redux, and CSS frameworks.</p>
-          </li>
-          <li>
-            <strong>Web Developer Intern</strong> - Web Agency (2021 - 2022)
-            <p>Assisted in building client websites, implemented UI components and performed testing.</p>
-          </li>
-        </ul>
-        <h3>Education</h3>
-        <ul>
-          <li>
-            <strong>B.Sc. in Computer Science</strong> - University XYZ (2019 - 2023)
-            <p>Graduated with honors, focusing on software development and user interface design.</p>
-          </li>
-        </ul>
-        <h3>Skills</h3>
-        <ul className="skills-list">
-          <li>React</li>
-          <li>JavaScript</li>
-          <li>CSS &amp; Sass</li>
-          <li>GSAP</li>
-          <li>Git</li>
-          <li>Node.js</li>
-        </ul>
+    <section className="container resume-section">
+      <h2 className="section-title">My Resume(s)</h2>
+      <div className="resume-container">
+        {/* CV PDF */}
+        <div className="pdf-viewer glass">
+          <h3>Nederlandse Versie</h3>
+          <iframe
+            src="/Portfolio/CV_Vlad.pdf"
+            title="CV"
+            className="pdf-frame"
+          />
+          <button 
+            className="download-button"
+            onClick={() => handleDownload('CV_Vlad.pdf', 'CV_Vlad.pdf')}
+          >
+            ⬇ Download
+          </button>
+        </div>
+
+        {/* Resume PDF */}
+        <div className="pdf-viewer glass">
+          <h3>English Version</h3>
+          <iframe
+            src="/Portfolio/Resume_Vlad.pdf"
+            title="Resume"
+            className="pdf-frame"
+          />
+          <button 
+            className="download-button"
+            onClick={() => handleDownload('RESUME_Vlad.pdf', 'RESUME_Vlad.pdf')}
+          >
+            ⬇ Download
+          </button>
+        </div>
       </div>
     </section>
   );
