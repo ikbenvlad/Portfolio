@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Black background -->
+  <rect width="200" height="200" fill="#000000"/>
+  
+  <!-- White V letter -->
+  <text x="100" y="150" font-size="120" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial, sans-serif">V</text>
+</svg>

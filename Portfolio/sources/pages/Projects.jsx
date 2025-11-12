@@ -1,12 +1,29 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
-// Temporarily remove image imports until assets are added
-// import projectImg1 from '../assets/project1.jpg';
-// import projectImg2 from '../assets/project2.jpg';
-// import projectImg3 from '../assets/project3.jpg';
 import ProjectCard from '../components/ProjectCard';
 
 function Projects() {
+  const projects = [
+    {
+      title: 'Caesar Cipher Shifts',
+      desc: 'A sall cipher shift which has a=b and a=z encoding.',
+      img: 'https://via.placeholder.com/300x200?text=Project+1',
+      link: 'https://github.com/ikbenvlad/Caesar-Cipher-Shifts'
+    },
+    {
+      title: 'Project 2',
+      desc: 'A short terminal adventure game made in C#.',
+      img: 'https://via.placeholder.com/300x200?text=Project+2',
+      link: 'https://github.com/ikbenvlad/ROC-cSharp-TextBaseAdventure'
+    },
+    {
+      title: 'Project 3',
+      desc: 'A Processing project in which you catch balls falling from the sky.',
+      img: 'https://via.placeholder.com/300x200?text=Project+3',
+      link: 'https://github.com/ikbenvlad/Eindopdracht-ROC-inleiding-programmeren'
+    }
+  ];
+
   useEffect(() => {
     const cards = document.querySelectorAll('.project-card');
     cards.forEach((card, i) => {
@@ -24,18 +41,15 @@ function Projects() {
     <section className="container">
       <h2 className="section-title">Projects</h2>
       <div className="projects-grid">
-        <ProjectCard
-          title="Project One"
-          desc="A brief description of project one. It highlights the main features and technologies used."
-        />
-        <ProjectCard
-          title="Project Two"
-          desc="A brief description of project two. It showcases skills in modern web development."
-        />
-        <ProjectCard
-          title="Project Three"
-          desc="A brief description of project three. This project includes interactive and animated elements."
-        />
+        {projects.map((p, i) => (
+          <ProjectCard
+            key={i}
+            title={p.title}
+            desc={p.desc}
+            img={p.img}
+            link={p.link}
+          />
+        ))}
       </div>
     </section>
   );
