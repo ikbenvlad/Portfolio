@@ -237,3 +237,128 @@ main {
     font-size: 1rem;
   }
 }
+<<<<<<< Updated upstream
+=======
+
+/* Resume Page Styles */
+.resume-section {
+  padding: 4rem 2rem;
+}
+
+.resume-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pdf-viewer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem !important;
+  border-radius: 1rem;
+  height: 870px;
+}
+
+.pdf-viewer h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.pdf-frame {
+  width: 100%;
+  height: 900px;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  background: white;
+  flex: 1;
+}
+
+.download-button {
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: var(--background);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.download-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+.download-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Resume Grid */
+@media screen and (max-width: 1024px) {
+  .resume-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-frame {
+    height: 800px;
+  }
+
+  .pdf-viewer {
+    height: 900px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .resume-section {
+    padding: 2rem 1rem;
+  }
+
+  .pdf-viewer {
+    padding: 1.5rem !important;
+    height: 700px;
+  }
+
+  .pdf-frame {
+    height: 600px;
+  }
+
+  .download-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Projects Page Styles */
+.projects-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.github-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: var(--background);
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.github-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+.github-button:active {
+  transform: translateY(0);
+}
+>>>>>>> Stashed changes
