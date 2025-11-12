@@ -237,8 +237,6 @@ main {
     font-size: 1rem;
   }
 }
-<<<<<<< Updated upstream
-=======
 
 /* Resume Page Styles */
 .resume-section {
@@ -360,9 +358,5 @@ main {
 
 .github-button:active {
   transform: translateY(0);
-<<<<<<< Updated upstream
 }
->>>>>>> Stashed changes
-=======
-}
->>>>>>> Stashed changes
+
