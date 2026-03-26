@@ -82,7 +82,7 @@ function About() {
                 </div>
               </div>
             </div>
-            </div>
+
             <p><strong>Open to internships, mentorships, and junior roles — reach out via the Contact page.</strong></p>
           </div>
         </div>
