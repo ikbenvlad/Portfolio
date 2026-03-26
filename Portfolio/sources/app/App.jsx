@@ -8,6 +8,7 @@ import Projects from '../pages/Projects';
 import Devlog from '../pages/Devlog';
 import Contact from '../pages/Contact';
 import Resume from '../pages/Resume';
+import Testing from '../pages/Testing';
 import '../styles/App.css';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/devlog" element={<Devlog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/testing" element={<Testing />} />
         </Routes>
       </main>
       <Footer />

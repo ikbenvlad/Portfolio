@@ -28,13 +28,13 @@ function Resume() {
         <div className="pdf-viewer glass">
           <h3>Nederlandse Versie</h3>
           <iframe
-            src="/Portfolio/CV_Vlad.pdf"
+            src="/Portfolio/CV-Vlad.pdf"
             title="CV"
             className="pdf-frame"
           />
           <button 
             className="download-button"
-            onClick={() => handleDownload('CV_Vlad.pdf', 'CV_Vlad.pdf')}
+            onClick={() => handleDownload('CV-Vlad.pdf', 'CV-Vlad.pdf')}
           >
             ⬇ Download
           </button>
@@ -44,13 +44,13 @@ function Resume() {
         <div className="pdf-viewer glass">
           <h3>English Version</h3>
           <iframe
-            src="/Portfolio/Resume_Vlad.pdf"
+            src="/Portfolio/CV-Vlad-Engels.pdf"
             title="Resume"
             className="pdf-frame"
           />
           <button 
             className="download-button"
-            onClick={() => handleDownload('RESUME_Vlad.pdf', 'RESUME_Vlad.pdf')}
+            onClick={() => handleDownload('CV-Vlad-Engels.pdf', 'CV-Vlad-Engels.pdf')}
           >
             ⬇ Download
           </button>
