@@ -44,13 +44,13 @@ function Resume() {
         <div className="pdf-viewer glass">
           <h3>English Version</h3>
           <iframe
-            src="/Portfolio/Resume_Vlad.pdf"
+            src="/Portfolio/CV-Vlad-Engels.pdf"
             title="Resume"
             className="pdf-frame"
           />
           <button 
             className="download-button"
-            onClick={() => handleDownload('Resume_Vlad.pdf', 'Resume_Vlad.pdf')}
+            onClick={() => handleDownload('CV-Vlad-Engels.pdf', 'CV-Vlad-Engels.pdf')}
           >
             ⬇ Download
           </button>

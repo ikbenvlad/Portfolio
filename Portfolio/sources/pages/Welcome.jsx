@@ -34,7 +34,7 @@ export default function Welcome() {
         <div className="glass welcome-content">
           <p className="welcome-greeting">Hi, I'm</p>
           <h1 className="welcome-text">Vlad</h1>
-          <h2 className="welcome-subtitle">I build things for the web.</h2>
+          <h2 className="welcome-subtitle">Student, Game Developer & QA Tester.</h2>
           <p className="welcome-subtext">
             I'm a software developer specializing in creating Games and Web Applications on multiple platforms. 
           </p>
