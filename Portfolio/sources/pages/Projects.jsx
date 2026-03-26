@@ -11,13 +11,13 @@ function Projects() {
       link: 'https://github.com/ikbenvlad/Caesar-Cipher-Shifts'
     },
     {
-      title: 'Project 2',
+      title: 'Text based Adventure',
       desc: 'A short terminal adventure game made in C#.',
       img: 'https://via.placeholder.com/300x200?text=Project+2',
       link: 'https://github.com/ikbenvlad/ROC-cSharp-TextBaseAdventure'
     },
     {
-      title: 'Project 3',
+      title: 'Catch the Balls',
       desc: 'A Processing project in which you catch balls falling from the sky.',
       img: 'https://via.placeholder.com/300x200?text=Project+3',
       link: 'https://github.com/ikbenvlad/Eindopdracht-ROC-inleiding-programmeren'
