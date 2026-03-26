@@ -28,10 +28,20 @@ function About() {
             <h3>Language Abilities</h3>
             <div className="language-abilities">
               <div className="skill-row">
-                <div className="skill-label">Python</div>
-                <div className="skill-track" role="img" aria-label="Python skill 20 percent">
-                  <div className="skill-fill" style={{ width: '20%' }}>
-                    <span className="skill-percent">20%</span>
+                <div className="skill-label">PHP</div>
+                <div className="skill-track" role="img" aria-label="PHP skill 30 percent">
+                  <div className="skill-fill" style={{ width: '30%' }}>
+                    <span className="skill-percent">30%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="language-abilities">
+              <div className="skill-row">
+                <div className="skill-label">MySQL</div>
+                <div className="skill-track" role="img" aria-label="MySQL skill 35 percent">
+                  <div className="skill-fill" style={{ width: '35%' }}>
+                    <span className="skill-percent">35%</span>
                   </div>
                 </div>
               </div>
@@ -47,7 +57,7 @@ function About() {
 
               <div className="skill-row">
                 <div className="skill-label">C#</div>
-                <div className="skill-track" role="img" aria-label="C Sharp skill 65 percent">
+                <div className="skill-track" role="img" aria-label="C# skill 65 percent">
                   <div className="skill-fill" style={{ width: '65%' }}>
                     <span className="skill-percent">65%</span>
                   </div>
@@ -55,10 +65,10 @@ function About() {
               </div>
 
               <div className="skill-row">
-                <div className="skill-label">JavaScript</div>
-                <div className="skill-track" role="img" aria-label="JavaScript skill 33 percent">
-                  <div className="skill-fill" style={{ width: '33%' }}>
-                    <span className="skill-percent">33%</span>
+                <div className="skill-label">C++</div>
+                <div className="skill-track" role="img" aria-label="C++ skill 30 percent">
+                  <div className="skill-fill" style={{ width: '30%' }}>
+                    <span className="skill-percent">30%</span>
                   </div>
                 </div>
               </div>
