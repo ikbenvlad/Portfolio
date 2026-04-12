@@ -22,6 +22,10 @@ function Testing() {
               <p><strong><a href="https://www.roblox.com/games/79828173476605/Freeflow-PRE-ALPHA" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Freeflow</a></strong></p>
               <p>Here I'm not much of a tester, but rather a voice actor for the game. I do help report bugs and provide feedback.</p>
             </div>
+             <div className="contact-item">
+              <p><strong><a href="https://discord.gg/5tb34wyWv2" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Abyssal Escape</a></strong></p>
+              <p>A Sonic the Hedgehog asym game, which I've joined the testing team in april 2026. I've quickly been establishing my skills and am learning how testing different genres works.</p>
+            </div>
           </div>
         </div>
       </div>
