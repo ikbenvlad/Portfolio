@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-  <BrowserRouter basename="/Portfolio">
+  <BrowserRouter basename="/Portfolio/">
     <App />
   </BrowserRouter>
 );
