@@ -6,7 +6,7 @@ function Testing() {
       <h2 className="section-title">Testing Experience</h2>
       <div className="glass testing-container">
         <div className="section-content">
-          <p>I have experience in manual quality assurance testing. My experience currently lies within Roblox games, mostly focusing on the first/third person parkour side of the platform. I enjoy contributing to the testing process and helping to improve the overall quality of the games, and always want to help and learn. View my complete testing portfolio on <a href="https://ikbenvladport.carrd.co/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>my carrd.</a>.</p>
+          <p>I have experience in manual quality assurance testing. My experience currently lies within Roblox games, mostly focusing on the first/third person parkour side of the platform. I enjoy contributing to the testing process and helping to improve the overall quality of the games, and always want to help and learn. View my complete testing portfolio on <a href="https://ikbenvladport.carrd.co/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>my carrd</a>.</p>
 
           <h3>Testing Experience List</h3>
           <div className="contact-list">
