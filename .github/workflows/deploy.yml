@@ -28,6 +28,10 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Publish dist to gh-pages
-        run: npx gh-pages -d dist -x -m "Deploy ${GITHUB_SHA}" -u "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>" -r "https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        # gh-pages' -u parser rejects the "[bot]" name, so set the identity through git config instead.
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          npx gh-pages -d dist -x -m "Deploy ${GITHUB_SHA}" -r "https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
