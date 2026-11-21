@@ -26,7 +26,7 @@ function Projects() {
     },
     {
       title: 'QuantumVault',
-      desc: 'A team-made Unity puzzle game. I worked on the player model and animations.',
+      desc: 'A team-made 3D puzzle game made in Unity. I worked on the player model, animations and narrator logic as well as documentation.',
       link: 'https://github.com/TREYX77/QuantumVault'
     }
   ];
