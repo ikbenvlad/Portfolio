@@ -11,7 +11,7 @@ function Header({ theme, toggleTheme }) {
   return (
     <header>
       <nav className="container">
-        <div className="logo">Vlad Tarba's Protfolio</div>
+        <div className="logo">Vlad Tarba's Portfolio</div>
         <button className="mobile-menu-btn" onClick={toggleMenu}>
           <span className="menu-icon"></span>
         </button>
@@ -29,6 +29,11 @@ function Header({ theme, toggleTheme }) {
           <li>
             <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active-link' : '')}>
               Projects
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/testing" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              Testing
             </NavLink>
           </li>
           {/* <li>

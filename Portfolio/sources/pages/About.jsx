@@ -23,7 +23,7 @@ function About() {
             <p>I'm actively seeking opportunities to expand my skills through school and internships. I'm excited to expand in the Game/Software development field and increase my knowledge.</p>
 
             <h3>Skills</h3>
-            <p>I have basic experiece in coding languages such as C#, C++, PHP, MySQL, and others. I have a lot of knowledge with QA testing, more of which you can find on the <Link to="/testing" style={{ textDecoration: 'underline' }}>Testing experience</Link> page.</p>
+            <p>I have basic experience in coding languages such as C#, C++, PHP, MySQL, and others. I have a lot of knowledge in QA testing, more of which you can find on the <Link to="/testing" style={{ textDecoration: 'underline' }}>Testing experience</Link> page.</p>
 
             <h3>Language Abilities</h3>
             <div className="language-abilities">
@@ -36,7 +36,6 @@ function About() {
                 </div>
               </div>
 
-              <div className="language-abilities">
               <div className="skill-row">
                 <div className="skill-label">MySQL</div>
                 <div className="skill-track" role="img" aria-label="MySQL skill 35 percent">
@@ -82,7 +81,6 @@ function About() {
                 </div>
               </div>
             </div>
-          </div>
             <p><strong>Open to internships, mentorships, and junior roles — reach out via the Contact page.</strong></p>
           </div>
         </div>

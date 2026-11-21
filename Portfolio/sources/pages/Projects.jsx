@@ -6,21 +6,28 @@ function Projects() {
   const projects = [
     {
       title: 'Caesar Cipher Shifts',
-      desc: 'A sall cipher shift which has a=b and a=z encoding.',
-      img: 'https://via.placeholder.com/300x200?text=Project+1',
+      desc: 'A small cipher shift which has a=b and a=z encoding.',
       link: 'https://github.com/ikbenvlad/Caesar-Cipher-Shifts'
     },
     {
       title: 'Text based Adventure',
       desc: 'A short terminal adventure game made in C#.',
-      img: 'https://via.placeholder.com/300x200?text=Project+2',
       link: 'https://github.com/ikbenvlad/ROC-cSharp-TextBaseAdventure'
     },
     {
       title: 'Catch the Balls',
       desc: 'A Processing project in which you catch balls falling from the sky.',
-      img: 'https://via.placeholder.com/300x200?text=Project+3',
       link: 'https://github.com/ikbenvlad/Eindopdracht-ROC-inleiding-programmeren'
+    },
+    {
+      title: 'Diorama Horizon',
+      desc: 'A minimap and world map engine written in Rust, with waypoints, a radar and cave views.',
+      link: 'https://github.com/ikbenvlad/diorama-horizon'
+    },
+    {
+      title: 'QuantumVault',
+      desc: 'A team-made Unity puzzle game. I worked on the player model and animations.',
+      link: 'https://github.com/TREYX77/QuantumVault'
     }
   ];
 

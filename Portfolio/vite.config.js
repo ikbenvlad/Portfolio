@@ -1,30 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { copyFileSync } from 'node:fs';
 
-const spaFallbackPlugin = {
-  name: 'spa-fallback',
-  apply: 'serve',
-  configureServer(server) {
-    return () => {
-      server.middlewares.use((req, res, next) => {
-        const url = req.url.split('?')[0];
-        
-        // Skip non-GET requests, api calls, and actual files
-        if (req.method !== 'GET' || url.startsWith('/api/') || /\.[a-z]+$/i.test(url)) {
-          next();
-          return;
-        }
-
-        // Rewrite SPA routes to index.html
-        req.url = '/index.html';
-        next();
-      });
-    };
-  }
-};
+const spa404 = { name: 'spa-404', apply: 'build', closeBundle() { copyFileSync('dist/index.html', 'dist/404.html'); } };
 
 export default defineConfig({
-  plugins: [react(), spaFallbackPlugin],
+  plugins: [react(), spa404],
   base: '/Portfolio/',
   root: '.',
   publicDir: 'public',
