@@ -23,64 +23,25 @@ function About() {
             <p>I'm actively seeking opportunities to expand my skills through school and internships. I'm excited to expand in the Game/Software development field and increase my knowledge.</p>
 
             <h3>Skills</h3>
-            <p>I have basic experience in coding languages such as C#, C++, PHP, MySQL, and others. I have a lot of knowledge in QA testing, more of which you can find on the <Link to="/testing" style={{ textDecoration: 'underline' }}>Testing experience</Link> page.</p>
+            <p>Below are the languages and tools I've used in my projects and the ones I'm currently learning. I have a lot of knowledge in QA testing, more of which you can find on the <Link to="/testing" style={{ textDecoration: 'underline' }}>Testing experience</Link> page.</p>
 
-            <h3>Language Abilities</h3>
-            <div className="language-abilities">
-              <div className="skill-row">
-                <div className="skill-label">PHP</div>
-                <div className="skill-track" role="img" aria-label="PHP skill 30 percent">
-                  <div className="skill-fill" style={{ width: '30%' }}>
-                    <span className="skill-percent">30%</span>
-                  </div>
-                </div>
-              </div>
+            <h4>Used in projects</h4>
+            <ul className="skills-list">
+              <li>C# — Text based Adventure, QuantumVault</li>
+              <li>Unity — QuantumVault</li>
+              <li>Rust — Diorama Horizon</li>
+              <li>Processing / Java — Catch the Balls</li>
+              <li>Python — Caesar Cipher Shifts</li>
+            </ul>
 
-              <div className="skill-row">
-                <div className="skill-label">MySQL</div>
-                <div className="skill-track" role="img" aria-label="MySQL skill 35 percent">
-                  <div className="skill-fill" style={{ width: '35%' }}>
-                    <span className="skill-percent">35%</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="skill-row">
-                <div className="skill-label">Unity</div>
-                <div className="skill-track" role="img" aria-label="Unity skill 65 percent">
-                  <div className="skill-fill" style={{ width: '65%' }}>
-                    <span className="skill-percent">65%</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="skill-row">
-                <div className="skill-label">C#</div>
-                <div className="skill-track" role="img" aria-label="C# skill 65 percent">
-                  <div className="skill-fill" style={{ width: '65%' }}>
-                    <span className="skill-percent">65%</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="skill-row">
-                <div className="skill-label">C++</div>
-                <div className="skill-track" role="img" aria-label="C++ skill 30 percent">
-                  <div className="skill-fill" style={{ width: '30%' }}>
-                    <span className="skill-percent">30%</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="skill-row">
-                <div className="skill-label">HTML / CSS</div>
-                <div className="skill-track" role="img" aria-label="HTML and CSS skill 75 percent">
-                  <div className="skill-fill" style={{ width: '75%' }}>
-                    <span className="skill-percent">75%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h4>Learning</h4>
+            <ul className="skills-list">
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>C++</li>
+              <li>HTML / CSS</li>
+              <li>Laravel</li>
+            </ul>
             <p><strong>Open to internships, mentorships, and junior roles — reach out via the Contact page.</strong></p>
           </div>
         </div>
