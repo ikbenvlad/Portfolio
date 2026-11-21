@@ -1,12 +1,13 @@
 import React from 'react';
 
-function BlogPost({ title, date, summary }) {
+function BlogPost({ title, date, body }) {
   return (
     <div className="glass blog-post">
       <h3>{title}</h3>
       <small>{date}</small>
-      <p>{summary}</p>
-      <a href="#">Read More</a>
+      {body.split(/\n\s*\n/).map((paragraph, i) => (
+        <p key={i}>{paragraph}</p>
+      ))}
     </div>
   );
 }

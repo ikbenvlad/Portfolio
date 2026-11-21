@@ -6,6 +6,7 @@ import Welcome from '../pages/Welcome';
 import About from '../pages/About';
 import Projects from '../pages/Projects';
 import Devlog from '../pages/Devlog';
+import DevlogAdmin from '../pages/DevlogAdmin';
 import Contact from '../pages/Contact';
 import Resume from '../pages/Resume';
 import Testing from '../pages/Testing';
@@ -29,6 +30,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/devlog" element={<Devlog />} />
+          <Route path="/devlog/admin" element={<DevlogAdmin />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/testing" element={<Testing />} />

@@ -6,7 +6,7 @@ function Projects() {
   const projects = [
     {
       title: 'Caesar Cipher Shifts',
-      desc: 'A small cipher shift which has a=b and a=z encoding.',
+      desc: 'A small Python cipher shift which has a=b and a=z encoding.',
       link: 'https://github.com/ikbenvlad/Caesar-Cipher-Shifts'
     },
     {
