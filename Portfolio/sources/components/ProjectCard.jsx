@@ -5,7 +5,7 @@ function ProjectCard({ title, desc, img, link }) {
 
   return (
     <div className="glass project-card">
-      <img src={img} alt={title} className="project-img" />
+      {img && <img src={img} alt={title} className="project-img" />}
       <h3>{title}</h3>
       <p>{desc}</p>
       <a href={projectLink} target="_blank" rel="noopener noreferrer">
