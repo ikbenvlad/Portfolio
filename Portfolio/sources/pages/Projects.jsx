@@ -18,6 +18,21 @@ function Projects() {
       title: 'Catch the Balls',
       desc: 'A Processing project in which you catch balls falling from the sky.',
       link: 'https://github.com/ikbenvlad/Eindopdracht-ROC-inleiding-programmeren'
+    },
+    {
+      title: 'Diorama Horizon',
+      desc: 'A minimap and world map engine written in Rust, with waypoints, a radar and cave views.',
+      link: 'https://github.com/ikbenvlad/diorama-horizon'
+    },
+    {
+      title: 'QuantumVault',
+      desc: 'A team-made Unity puzzle game. I worked on the player model and animations.',
+      link: 'https://github.com/TREYX77/QuantumVault'
+    },
+    {
+      title: 'Hyprland Config',
+      desc: 'My Linux desktop setup: Hyprland, Quickshell, Rofi, Ghostty and more.',
+      link: 'https://github.com/ikbenvlad/vlad-hyprland-config-files'
     }
   ];
 
