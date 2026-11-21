@@ -28,11 +28,6 @@ function Projects() {
       title: 'QuantumVault',
       desc: 'A team-made Unity puzzle game. I worked on the player model and animations.',
       link: 'https://github.com/TREYX77/QuantumVault'
-    },
-    {
-      title: 'Hyprland Config',
-      desc: 'My Linux desktop setup: Hyprland, Quickshell, Rofi, Ghostty and more.',
-      link: 'https://github.com/ikbenvlad/vlad-hyprland-config-files'
     }
   ];
 
