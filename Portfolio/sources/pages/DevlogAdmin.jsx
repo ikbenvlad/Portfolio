@@ -21,7 +21,8 @@ function toBase64(text) {
 function slugify(date, title) {
   const words = title.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60);
-  return words ? `${date}-${words}` : date;
+  // Titles with no Latin letters slug to nothing; a time suffix keeps same-day posts apart.
+  return `${date}-${words || Date.now().toString(36)}`;
 }
 
 function DevlogAdmin() {

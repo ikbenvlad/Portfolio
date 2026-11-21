@@ -4,6 +4,8 @@ import BlogPost from '../components/BlogPost';
 
 // Posts are JSON files committed by /devlog/admin and bundled at build time.
 const devlogPosts = Object.values(import.meta.glob('../posts/*.json', { eager: true, import: 'default' }))
+  // Skip hand-edited files missing fields, so one bad post can't crash the app.
+  .filter((p) => typeof p?.title === 'string' && typeof p.date === 'string' && typeof p.body === 'string')
   .sort((a, b) => b.date.localeCompare(a.date));
 
 function Devlog() {
