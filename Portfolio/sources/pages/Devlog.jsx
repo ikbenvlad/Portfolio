@@ -2,6 +2,10 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import BlogPost from '../components/BlogPost';
 
+// Posts are JSON files committed by /devlog/admin and bundled at build time.
+const devlogPosts = Object.values(import.meta.glob('../posts/*.json', { eager: true, import: 'default' }))
+  .sort((a, b) => b.date.localeCompare(a.date));
+
 function Devlog() {
   useEffect(() => {
     const posts = document.querySelectorAll('.blog-post');
@@ -19,16 +23,10 @@ function Devlog() {
   return (
     <section className="container">
       <h2 className="section-title">Devlog</h2>
-      <BlogPost
-        title="My First Blog Post"
-        date="Jan 1, 2025"
-        summary="This is a brief summary of my first blog post. It talks about my experiences learning React and building my first portfolio website."
-      />
-      <BlogPost
-        title="Another Devlog Entry"
-        date="Feb 15, 2025"
-        summary="A summary of another entry. In this post, I discuss advanced CSS techniques and animations with GSAP."
-      />
+      {devlogPosts.length === 0 && <p>No posts yet. Check back soon.</p>}
+      {devlogPosts.map((p) => (
+        <BlogPost key={p.date + p.title} title={p.title} date={p.date} body={p.body} />
+      ))}
     </section>
   );
 }

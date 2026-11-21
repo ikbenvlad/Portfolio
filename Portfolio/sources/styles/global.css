@@ -292,10 +292,6 @@ button:hover {
 .blog-post h3 {
   margin: 0.5rem 0;
 }
-.blog-post a {
-  color: var(--accent);
-  text-decoration: underline;
-}
 
 /* About Page */
 .about-container {
