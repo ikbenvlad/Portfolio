@@ -388,6 +388,37 @@ textarea {
   min-height: 100px;
 }
 
+/* Form status (Contact and Devlog admin) */
+.form-success, .form-error {
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--accent2);
+}
+.form-error { border-left-color: #e53e3e; }
+
+/* Devlog admin */
+.admin-card { margin-bottom: 1.5rem; }
+.admin-card button + button { margin-left: 0.5rem; }
+.admin-card button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+.admin-card button.danger { background: #c53030; }
+.admin-card summary { cursor: pointer; margin: 1rem 0 0.5rem; }
+.form-check { display: block; margin-bottom: 1rem; }
+.form-check input { width: auto; margin: 0 0.5rem 0 0; }
+.admin-posts { margin-top: 1rem; }
+.admin-posts li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--glass-border);
+}
+.admin-posts button { padding: 0.3rem 0.7rem; font-size: 0.9rem; }
+
 /* Resume Page */
 .resume-content h3 {
   margin-top: 1rem;
