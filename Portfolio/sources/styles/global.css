@@ -293,6 +293,80 @@ button:hover {
   margin: 0.5rem 0;
 }
 
+/* Markdown inside devlog posts; the global a/ul resets above strip links and bullets. */
+.post-body {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.post-body h1, .post-body h2, .post-body h3, .post-body h4 {
+  margin: 1.2rem 0 0.5rem;
+  line-height: 1.3;
+}
+.post-body h1 { font-size: 1.4rem; }
+.post-body h2 { font-size: 1.25rem; }
+.post-body h3, .post-body h4 { font-size: 1.1rem; }
+.post-body ul, .post-body ol {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+.post-body ul { list-style: disc; }
+.post-body .contains-task-list { list-style: none; padding-left: 0.5rem; }
+.post-body input[type="checkbox"] { width: auto; margin: 0 0.4rem 0 0; }
+.post-body a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+/* The light theme's accent (#06b6d4) is ~2.3:1 on the page; this cyan is ~5:1. */
+body.light .post-body a { color: #0e7490; }
+/* GFM footnotes render as <section> with a screen-reader-only heading. */
+.post-body section { padding: 0; }
+.post-body .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.post-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+}
+.post-body pre {
+  overflow-x: auto;
+  padding: 0.75rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+}
+.post-body pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+.post-body blockquote {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+  opacity: 0.85;
+}
+.post-body table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.post-body th, .post-body td {
+  border: 1px solid var(--glass-border);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+.post-body img { border-radius: 6px; }
+
 /* About Page */
 .about-container {
   display: flex;
@@ -325,6 +399,37 @@ textarea {
   resize: vertical;
   min-height: 100px;
 }
+
+/* Form status (Contact and Devlog admin) */
+.form-success, .form-error {
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--accent2);
+}
+.form-error { border-left-color: #e53e3e; }
+
+/* Devlog admin */
+.admin-card { margin-bottom: 1.5rem; }
+.admin-card button + button { margin-left: 0.5rem; }
+.admin-card button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+.admin-card button.danger { background: #c53030; }
+.admin-card summary { cursor: pointer; margin: 1rem 0 0.5rem; }
+.form-check { display: block; margin-bottom: 1rem; }
+.form-check input { width: auto; margin: 0 0.5rem 0 0; }
+.admin-posts { margin-top: 1rem; }
+.admin-posts li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--glass-border);
+}
+.admin-posts button { padding: 0.3rem 0.7rem; font-size: 0.9rem; }
 
 /* Resume Page */
 .resume-content h3 {
