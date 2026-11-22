@@ -1,12 +1,17 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import BlogPost from '../components/BlogPost';
+import { parsePost, comparePosts } from '../lib/posts';
 
-// Posts are JSON files committed by /devlog/admin and bundled at build time.
-const devlogPosts = Object.values(import.meta.glob('../posts/*.json', { eager: true, import: 'default' }))
-  // Skip hand-edited files missing fields, so one bad post can't crash the app.
-  .filter((p) => typeof p?.title === 'string' && typeof p.date === 'string' && typeof p.body === 'string')
-  .sort((a, b) => b.date.localeCompare(a.date));
+// Posts are Markdown files committed by /devlog/admin and bundled at build time.
+const devlogPosts = Object.entries(import.meta.glob('../posts/*.md', { eager: true, query: '?raw', import: 'default' }))
+  .map(([path, text]) => {
+    const post = parsePost(text);
+    // Skip hand-edited files with broken frontmatter, so one bad post can't crash the app.
+    return post && { ...post, slug: path.slice(path.lastIndexOf('/') + 1, -'.md'.length) };
+  })
+  .filter(Boolean)
+  .sort(comparePosts);
 
 function Devlog() {
   useEffect(() => {
@@ -27,7 +32,7 @@ function Devlog() {
       <h2 className="section-title">Devlog</h2>
       {devlogPosts.length === 0 && <p>No posts yet. Check back soon.</p>}
       {devlogPosts.map((p) => (
-        <BlogPost key={p.date + p.title} title={p.title} date={p.date} body={p.body} />
+        <BlogPost key={p.slug} title={p.title} date={p.date} pinned={p.pinned} body={p.body} />
       ))}
     </section>
   );
