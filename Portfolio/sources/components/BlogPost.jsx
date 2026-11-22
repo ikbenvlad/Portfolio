@@ -5,9 +5,10 @@ import remarkGfm from 'remark-gfm';
 const plugins = [remarkGfm];
 // react-markdown escapes raw HTML and drops unsafe URLs by default; never add rehype-raw here.
 const components = {
-  a: ({ href, title, children }) => (
-    <a href={href} title={title} target="_blank" rel="noopener noreferrer">{children}</a>
-  )
+  // In-page links (GFM footnotes) stay in this tab; everything else opens a new one.
+  a: ({ href, title, children }) => (href?.startsWith('#')
+    ? <a href={href} title={title}>{children}</a>
+    : <a href={href} title={title} target="_blank" rel="noopener noreferrer">{children}</a>)
 };
 
 function BlogPost({ title, date, pinned, body }) {

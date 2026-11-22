@@ -117,19 +117,27 @@ function DevlogAdmin() {
     }
     if (!res.ok) throw new Error(await errorMessage(res, false));
     const files = (await res.json()).filter((f) => f.type === 'file' && f.name.endsWith('.md'));
-    setPosts(await Promise.all(files.map(async (f) => {
+    const loaded = await Promise.all(files.map(async (f) => {
       const fileRes = await api(`/${encodeURIComponent(f.name)}?ref=main`);
       if (!fileRes.ok) throw new Error(await errorMessage(fileRes, false));
       const file = await fileRes.json();
       const post = parsePost(fromBase64(file.content))
         || { broken: true, title: f.name, date: '', pinned: false, body: '' };
       return { ...post, slug: f.name.slice(0, -'.md'.length), sha: file.sha };
-    })));
+    }));
+    // A post open in the form that changed remotely would be overwritten by the next save, so close it.
+    const openSha = editing && posts?.find((p) => p.slug === editing)?.sha;
+    setPosts(loaded);
+    if (editing && loaded.find((p) => p.slug === editing)?.sha !== openSha) {
+      resetForm();
+      setStatus({ state: 'error', message: 'The post you were editing changed elsewhere, so the form was closed. Open it again.' });
+    }
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const post = { title: title.trim(), date, pinned, body: body.trim() };
+    // Keep first-line indentation: a body may open with an indented code block.
+    const post = { title: title.trim(), date, pinned, body: body.replace(/^\n+|\s+$/g, '') };
     if (!post.title || !post.body || !date) {
       setStatus({ state: 'error', message: 'Title, date and body are all required.' });
       return;
